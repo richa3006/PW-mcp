@@ -12,7 +12,7 @@ test('add a new employee', async ({ page }) => {
   await page.getByPlaceholder('First Name').fill('John123');
   await page.getByPlaceholder('Last Name').fill('Doe456');
   await Promise.all([
-    page.waitForURL(/\\/pim\\/viewPersonalDetails\\/empNumber\\/\\d+/),
+    page.waitForURL(/\/pim\/viewPersonalDetails\/empNumber\/\d+/),
     page.getByRole('button', { name: 'Save' }).click(),
   ]);
 
